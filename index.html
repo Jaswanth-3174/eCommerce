@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My eCommerce Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hero {
+            background: url('images/hero-banner.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .testimonial {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .testimonial-item {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .newsletter {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .newsletter input {
+            width: 70%;
+            max-width: 400px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            color: #343a40;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cartModal">Cart <span class="badge badge-pill badge-primary" id="cart-count">0</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Shop!</h1>
+            <p>Find the best products for you.</p>
+            <a class="btn btn-primary btn-lg" href="products.html" role="button">Shop Now</a>
+        </div>
+        <div class="hero-background"></div>
+    </div>
+
+
+    <!-- Featured Products -->
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Featured Products</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/Product1.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">₹750.00</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Product 1" data-price="750.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/Product2.jpg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">₹1500.00</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Product 2" data-price="1500.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/Product3.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 3</h5>
+                        <p class="card-text">₹2250.00</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Product 3" data-price="2250.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promotions -->
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Special Promotions</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert alert-success text-center">
+                    <h4>Summer Sale!</h4>
+                    <p>Get up to 50% off on selected items.</p>
+                    <a class="btn btn-secondary" href="products.html">Shop Now</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="alert alert-warning text-center">
+                    <h4>New Arrivals</h4>
+                    <p>Check out the latest additions to our store.</p>
+                    <a class="btn btn-secondary" href="products.html">See More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Testimonials -->
+    <div class="testimonial">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-item text-center">
+                        <p>"Amazing service and great products. Highly recommend!"</p>
+                        <footer>- Customer 1</footer>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item text-center">
+                        <p>"The quality of the products exceeded my expectations."</p>
+                        <footer>- Customer 2</footer>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item text-center">
+                        <p>"I love the variety and the user-friendly website."</p>
+                        <footer>- Customer 3</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates and offers directly in your inbox.</p>
+        <form action="#" method="post">
+            <input type="email" class="form-control mb-2" placeholder="Enter your email">
+            <button type="submit" class="btn btn-light">Subscribe</button>
+        </form>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="text-center mt-4 mb-4">
+        <h4>Follow Us</h4>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start">
+        <div class="container p-4">
+            <p>&copy; 2024 My eCommerce Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
